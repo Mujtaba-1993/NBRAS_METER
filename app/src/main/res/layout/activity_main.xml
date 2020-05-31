@@ -55,65 +55,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <EditText
-        android:id="@+id/widthText"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="28dp"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/hightText"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/hightText"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="28dp"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/m2View"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/m2View"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="28dp"
-        android:text="0"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <Button
-        android:id="@+id/btn_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_color"
-        android:fontFamily="casual"
-        android:text="احسسب"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/totalView"
         android:layout_width="229dp"
         android:layout_height="52dp"
-        android:layout_marginTop="100dp"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_count"
+        app:layout_constraintBottom_toTopOf="@+id/btnCount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hightText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/recycleNbras" />
 
     <TextView
         android:id="@+id/textView14"
@@ -123,9 +75,32 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/totalView"
-        app:layout_constraintEnd_toStartOf="@+id/totalView"
+        app:layout_constraintBottom_toTopOf="@+id/btnCount"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/totalView" />
+        app:layout_constraintTop_toBottomOf="@+id/recycleNbras" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleNbras"
+        android:layout_width="match_parent"
+        android:layout_height="543dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btnCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_color"
+        android:fontFamily="monospace"
+        android:onClick="btnCountClicked"
+        android:text="احسب"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
